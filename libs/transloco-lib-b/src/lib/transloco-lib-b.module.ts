@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { scopeLoader } from '../../../../scoped-translations';
 import { LocationBComponent } from './location-b.component';
+import { LocationB2Component } from './location-b2.component';
 
 @NgModule({
   imports: [CommonModule, TranslocoModule],
@@ -12,10 +13,10 @@ import { LocationBComponent } from './location-b.component';
       useValue: {
         scope: 'compB',
         loader: scopeLoader((lang, root) => import(`./${root}/${lang}.json`))
-      }
+      }, multi: true
     }
   ],
-  declarations: [LocationBComponent],
-  exports: [LocationBComponent]
+  declarations: [LocationBComponent, LocationB2Component],
+  exports: [LocationBComponent, LocationB2Component]
 })
 export class TranslocoLibBModule {}

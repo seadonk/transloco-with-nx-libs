@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'transloco-with-libs-b',
   template: `
     <ng-container *transloco="let t">
-      <p>where am I? {{ t('compB.gpsb') }}</p>
+      <p>where am I? {{ t('compB.gps') }}</p>
     </ng-container>
   `
 })

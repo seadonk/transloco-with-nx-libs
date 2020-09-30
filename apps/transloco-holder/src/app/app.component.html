@@ -7,8 +7,16 @@
     <p>Root: {{ t('gps') }}</p>
   </ng-container>
   <div style="display: flex; flex-direction: column">
-    <transloco-with-libs-b></transloco-with-libs-b>
+    a<transloco-with-libs-a></transloco-with-libs-a>
+    b<transloco-with-libs-b></transloco-with-libs-b>
+    b2<transloco-with-libs-b2></transloco-with-libs-b2>
   </div>
 
-  <router-outlet></router-outlet>
+  <pre> 
+    <code>
+      {{ theMap | json }}
+    </code>
+  </pre>
+
+  <!-- <router-outlet></router-outlet> -->
 </section>

@@ -7,9 +7,20 @@ import { TranslocoService } from '@ngneat/transloco';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private translocoService: TranslocoService) {}
+  constructor(public translocoService: TranslocoService) {}
 
   change(lang: string) {
     this.translocoService.setActiveLang(lang);
+  }
+
+  get theMap() {
+    return Array.from(
+      this.translocoService.getTranslation().entries()
+    )
+    .reduce((o, [key, value]) => { 
+      o[key] = value; 
+  
+      return o; 
+    }, {});
   }
 }

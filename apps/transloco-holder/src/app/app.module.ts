@@ -13,9 +13,10 @@ import {
 import { TranslocoLibBModule } from '@transloco-with-libs/transloco-lib-b';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
-import { routes } from './app-routes';
+// import { RouterModule } from '@angular/router';
+// import { routes } from './app-routes';
 import { availableLangs } from 'scoped-translations';
+import { TranslocoLibAModule } from '@transloco-with-libs/transloco-lib-a';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +25,8 @@ import { availableLangs } from 'scoped-translations';
     HttpClientModule,
     TranslocoModule,
     TranslocoLibBModule,
-    RouterModule.forRoot(routes)
+    TranslocoLibAModule,
+    // RouterModule.forRoot(routes)
   ],
   providers: [
     {
