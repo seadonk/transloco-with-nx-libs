@@ -5,6 +5,7 @@
 
   <ng-container *transloco="let t">
     <p>Root: {{ t('gps') }}</p>
+    <p>Root: {{ t('missing key') }}</p>
   </ng-container>
   <div style="display: flex; flex-direction: column">
     a<transloco-with-libs-a></transloco-with-libs-a>
@@ -12,7 +13,7 @@
     b2<transloco-with-libs-b2></transloco-with-libs-b2>
   </div>
 
-  <pre> 
+  <pre>
     <code>
       {{ theMap | json }}
     </code>

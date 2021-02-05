@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <ng-container *transloco="let t">
       <p>where am I? {{ t('compA.gps') }}</p>
+      <p>where am I? {{ t('compA.missing key') }}</p>
     </ng-container>
   `,
 })

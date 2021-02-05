@@ -7,6 +7,7 @@ import { scopeLoader } from 'scoped-translations';
   template: `
     <ng-container *transloco="let t">
       <p>where am I? {{ t('compB2.gps') }}</p>
+      <p>where am I? {{ t('compB23.gps') }}</p>
     </ng-container>
   `,
   providers: [

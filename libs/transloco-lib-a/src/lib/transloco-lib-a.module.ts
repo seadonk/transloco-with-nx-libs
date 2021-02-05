@@ -11,14 +11,19 @@ import { scopeLoader } from 'scoped-translations';
 //     component: LocationAComponent
 //   }
 // ];
+const scope = 'compA';
 @NgModule({
   imports: [CommonModule, TranslocoModule],
   providers: [
     {
       provide: TRANSLOCO_SCOPE,
       useValue: {
-        scope: 'compA',
-        loader: scopeLoader((lang, root) => import(`./${root}/${lang}.json`))
+        scope: scope,
+        loader: scopeLoader((lang, root) => {
+          return import(`./${root}/${lang}.json`)
+          // .then(() => console.log(`i18nScopeLoader: imported './${root}/${lang}.json' for Scope: ${scope}`))
+          // .catch(e => console.log(`i18nScopeLoader: failed to import './${root}/${lang}.json' for Scope: ${scope}`, e))
+        })
       }, multi: true
     }
   ],
